@@ -1,9 +1,10 @@
-Experiment : Measure how often the Conversationl AI correctly avoids answering the irrelevant queries
+### Experiment 
++ Measure how often the Conversationl AI correctly avoids answering the irrelevant queries
 
-Methodology: Training a machine learning model,
-
-    1. Label "AI FAIL" : AI responds to an irrelevant query
-    2. Label "AI PASS" : AI appropriately avoids an irrelevant query
+### Methodology
++ Training a machine learning model,
++ 1. Label "AI FAIL" : AI responds to an irrelevant query
++ 2. Label "AI PASS" : AI appropriately avoids an irrelevant query
 
 Dataset : 
 
