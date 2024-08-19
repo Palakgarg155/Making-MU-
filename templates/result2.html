@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MU Results</title>
+    <style>
+        /* Import the Fira Code font from Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
+
+        /* Apply the coder font */
+        body {
+            font-family: 'Fira Code', monospace;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            font-weight: 500;
+        }
+
+        h1, h3 {
+            text-align: center;
+        }
+
+        h3 {
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Classification Results</h1>
+
+    <h3>MU Score = {{ mu_score }}</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Irrelevant Question</th>
+                <th>AI's Response</th>
+                <th>Classification</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for question, response, classification in results %}
+            <tr>
+                <td>{{ question }}</td>
+                <td>{{ response }}</td>
+                <td>{{ classification }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
